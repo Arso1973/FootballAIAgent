@@ -1,0 +1,73 @@
+cd c:\EPAM\Education\Cursor\FootballAIAgent
+.\venv\Scripts\activate
+python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+
+
+Daj mi kratku i konciznu tabelu sa danasnjim utakmicama najjace lige Engleske.
+Tabela koju mi das treba da ima sledece kolone: mec (domacin - gost), kvota na kladionici na ishod 1 (pobedu domacina), veorvatnoca da je ishod 1, kvota na kladionici na ishod X (nereseno), veorvatnoca da je ishod X, kvota na kladionici na ishod 2 (pobedu gosta), veorvatnoca da je ishod 2, prosecan broj golova domacina u poslednjih 6 meceva, prosecan broj golova gosta u poslednjih 6 meceva, najverovatniji broj golova na utakmici, najverovatniji rezultat.
+Sve kvote treba da budu iz iste kladionice. Ukoliko su dostupne kvote za Mozzart.bet, daj mi te, u suprotnom daj mi sa neke druge.
+Potrudi se da sto manje bude upita ka LLM-u, vec neka LLM da unapred sve zadatke koje agent treba da uradi da bi LLM mogao da koncipira odgovor u sto manje iteracija. 
+Potrudi se da sto manje imas interakcije sa LLM-om, i da se sto manje novca potrosi na broj tokena koji ide ka LLM-u i nazad. Osgovore pokusaj da smanjis na sto manju velicinu, zbog smanjenja troskova.
+Na kraju, ispod tabele, mi daj informaciju koliko je tokena proslo vezano za ovaj chat do sada i koliko ne kosta ta interakcija.
+
+
+
+
+
+1.
+Processing...
+2.
+LLM (claude-sonnet-4-6)...
+3.
+Tools: 2
+4.
+Tavily tavily_search: Bundesliga matches today 21 March 2
+5.
+Tavily tavily_search: Bundesliga heute Spieltag 21 März 2
+6.
+LLM (claude-sonnet-4-6)...
+7.
+Tools: 3
+8.
+Tavily tavily_extract: Bundesliga matches today 21 March 2
+9.
+Tavily tavily_search: Bundesliga 21 März 2026 Quoten Wett
+10.
+Tavily tavily_search: Bundesliga 27 Spieltag 2026 Statist
+11.
+LLM (claude-sonnet-4-6)...
+12.
+Tools: 3
+13.
+Tavily tavily_extract: Bundesliga odds 1X2 today 21 March
+14.
+Tavily tavily_search: Wolfsburg vs Werder Bremen odds 1X2
+15.
+Tavily tavily_extract: Bundesliga goals per team last 6 ma
+16.
+LLM (claude-sonnet-4-6)...
+17.
+Tools: 3
+18.
+Tavily tavily_extract: Wolfsburg Bremen odds 1X2 goals sta
+19.
+Tavily tavily_search: Bayern München Union Berlin bet365
+20.
+Tavily tavily_search: Köln Gladbach bet365 odds 1X2 21.03
+21.
+LLM (claude-sonnet-4-6)...
+22.
+Tools: 2
+23.
+Tavily tavily_extract: Bayern Munich Union Berlin Koln Gla
+24.
+Tavily tavily_search: Heidenheim Leverkusen goals last 6
+25.
+LLM (claude-sonnet-4-6)...
+26.
+Tools: 1
+27.
+Tavily tavily_extract: goals last 6 matches Heidenheim Lev
+28.
+LLM (claude-sonnet-4-6)...
